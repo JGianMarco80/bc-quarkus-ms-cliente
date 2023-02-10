@@ -6,6 +6,7 @@ import com.nttd.ms.cliente.service.ClienteService;
 import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.inject.Inject;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @ApplicationScoped
@@ -16,7 +17,16 @@ public class ClienteServiceImpl implements ClienteService {
 
     @Override
     public List<Cliente> findAll() {
-        return clienteRepository.listAll();
+        List<Cliente> clientes = clienteRepository.listAll();
+        List<Cliente> clientesActivos = new ArrayList<>();
+
+        for (Cliente cliente : clientes) {
+            if(cliente.getEstado().equals("1")){
+                clientesActivos.add(cliente);
+            }
+        }
+
+        return clientesActivos;
     }
 
     @Override
