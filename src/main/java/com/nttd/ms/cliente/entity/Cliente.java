@@ -5,6 +5,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.time.LocalDate;
 import java.util.Date;
 
 @Entity
@@ -32,9 +33,9 @@ public class Cliente {
     private String nombreRazonSocial;
 
     @Column(name = "fecha_nacimiento_creacion")
-    private Date fechaNacimientoCreacion;
+    private LocalDate fechaNacimientoCreacion = LocalDate.now();
 
     @Column(name = "estado")
-    private String estado;
+    private String estado = "1";
 
 }
