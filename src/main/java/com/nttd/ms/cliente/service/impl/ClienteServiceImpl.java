@@ -5,7 +5,6 @@ import com.nttd.ms.cliente.repository.ClienteRepository;
 import com.nttd.ms.cliente.service.ClienteService;
 import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.inject.Inject;
-
 import java.util.ArrayList;
 import java.util.List;
 

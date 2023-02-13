@@ -4,9 +4,7 @@ import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-
 import java.time.LocalDate;
-import java.util.Date;
 
 @Entity
 @Table(name = "cliente")
@@ -20,9 +18,14 @@ public class Cliente {
     @Column(name = "id")
     private Long id;
 
+    //1: natural
+    //2: juridica
     @Column(name = "tipo_cliente")
     private String tipoCliente;
 
+    //1: DNI
+    //2: Carnet de extranjería
+    //3: RUC
     @Column(name = "tipo_documento")
     private String tipoDocumento;
 

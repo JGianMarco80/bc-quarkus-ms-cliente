@@ -1,7 +1,6 @@
 package com.nttd.ms.cliente.service;
 
 import com.nttd.ms.cliente.entity.Cliente;
-
 import java.util.List;
 
 public interface ClienteService {
